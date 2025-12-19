@@ -5,32 +5,125 @@
 }
 
 :root {
-    --default-section-height: 100vh;
+    /* Nav */
     --nav-height: 10vh;
+
+    /* Colors */
+    --background-color-gray: #EFEFEF;
+    --background-color-white: #FCFCFC;
+    --background-color-black: #111111;
+
+    --font-color-light: #FFFFFF;
+    --font-color-dark: #111111;
+
+    /* Borders */
+    --border-color-gray: #999999;
+    --border-color-darkgray: #CCCCCC;
+    --border-radius: 0.5em;
 }
 
+/* Nav Styles */
 nav {
+    background-color: var(--background-color-white);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-bottom: 1px solid black;
     height: var(--nav-height);
     position: sticky;
     top: 0;
+    border-bottom: 1px solid var(--border-color-darkgray);
 }
 
 nav a {
     text-decoration: none;
     font-size: 1.25em;
-    color: black;
+    color: var(--font-color-dark);
 }
 
+/* Section Styles */
 .section {
-    height: var(--default-section-height);
-    border: 1px solid black;
+    height: calc(100vh - var(--nav-height));
 }
 
-.section:nth-child(1) {
-    height: calc(var(--default-section-height) - var(--nav-height));
-    border: 1px solid red;
+.section:nth-child(even) {
+    background-color: var(--background-color-gray);
+    color: var(--font-color-dark);
 }
+
+.section:nth-child(odd) {
+    background-color: var(--background-color-white);
+}
+
+/* Home Styles */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#home h1 {
+    font-size: 3em;
+}
+
+/* Education Styles */
+
+
+
+/* Experience Styles */
+
+
+
+/* Projects Styles */
+
+
+
+/* Current Styles */
+
+
+
+/* Links Styles */
+#links {
+    padding-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 5em;
+}
+
+#links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3em;
+}
+
+.link-box {
+    height: 10em;
+    width: 10em;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+    background-color: var(--background-color-gray);
+    text-decoration: none;
+    transition: transform 0.25s ease-in-out;
+}
+
+.link-box:hover {
+    transform: scale(1.1);
+}
+
+.link-images {
+    width: 5em;
+}
+
+.link-text, #links-container {
+    color: var(--font-color-dark);
+    text-decoration: none;
+}
+
