@@ -20,6 +20,17 @@
     --border-color-gray: #999999;
     --border-color-darkgray: #CCCCCC;
     --border-radius: 0.5em;
+
+    /* Padding */
+    --title-padding-top: 3em;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.title {
+    font-size: 2.5em;
 }
 
 /* Nav Styles */
@@ -67,8 +78,48 @@ nav a {
 }
 
 /* Education Styles */
+#education {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--title-padding-top);
+    gap: 3em;
+}
 
+#education-wrapper {
+    display: flex;
+    flex-direction: row;
+}
 
+#education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    position: relative;
+}
+
+.education-timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.8em;
+    padding: 1.5em;
+    border-radius: 1em;
+    background-color: var(--background-color-gray);
+}
+
+.education-timeline-item-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.education-timeline-item-stat {
+    background-color: var(--background-color-white);
+    padding: 0.5em;
+    margin-top: 0.3em;
+    border-radius: 0.5em;
+}
 
 /* Experience Styles */
 
@@ -84,7 +135,7 @@ nav a {
 
 /* Links Styles */
 #links {
-    padding-top: 10vh;
+    padding-top: var(--title-padding-top);
     display: flex;
     align-items: center;
     justify-content: start;
