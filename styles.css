@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -23,11 +24,16 @@
 
     /* Padding */
     --title-padding-top: 3em;
+
+    /*  Images  */
+    --image-opacity: 80%;
 }
 
 body {
     font-family: 'Inter', sans-serif;
 }
+
+/* Class Styling */
 
 .title {
     font-size: 2.5em;
@@ -43,6 +49,7 @@ nav {
     position: sticky;
     top: 0;
     border-bottom: 1px solid var(--border-color-darkgray);
+    z-index: 99;
 }
 
 nav a {
@@ -54,6 +61,7 @@ nav a {
 /* Section Styles */
 .section {
     height: calc(100vh - var(--nav-height));
+    scroll-margin-top: var(--nav-height);
 }
 
 .section:nth-child(even) {
@@ -71,10 +79,6 @@ nav a {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
-
-#home h1 {
-    font-size: 3em;
 }
 
 /* Education Styles */
@@ -166,7 +170,7 @@ nav a {
 }
 
 .link-box:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .link-images {
@@ -176,5 +180,9 @@ nav a {
 .link-text, #links-container {
     color: var(--font-color-dark);
     text-decoration: none;
+}
+
+#linkedin-logo {
+    opacity: var(--image-opacity);
 }
 
