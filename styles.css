@@ -18,14 +18,18 @@
     --font-color-lightgrey: #e0e0e0;
     --font-color-grey: #333333;
     --font-color-dark: #111111;
-    --font-size-large: 3.5em;
-    --font-size-medium: 2em;
-    --font-size-small: 1.5em;
     --font-color-muted: #a0a0a0;
+
+    /* Sizing */
+    --font-size-lg: 3.5em;
+    --font-size-md: 2.5em;
+    --font-size-sm: 1.5em;
+    --font-size-xs: 0.75em;
 
     /* Borders */
     --border-color-gray: #999999;
     --border-color-lightgray: #CCCCCC;
+    --border-color-light: #e0e0e0;
     --border-radius: 0.5em;
 
     /* Spacing */
@@ -47,7 +51,7 @@ body {
 }
 
 .title {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-lg);
     font-weight: 700;
 }
 
@@ -167,20 +171,52 @@ nav a:hover::after, nav a.active::after {
 }
 
 .project {
-    border: 1px solid var(--border-color-lightgray);
+    border: 0.08em solid var(--border-color-light);
     border-radius: var(--border-radius);
     padding: var(--spacing-md);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-sm);
+    transition: all 0.15s ease-in-out;
 }
 
 .project:hover {
-    border: 1px solid var(--border-color-gray);
+    border-color: var(--border-color-gray);
 }
 
 .project-title {
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-md);
+}
+
+.project-technologies {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    color: var(--font-color-dark);
+    margin: var(--spacing-sm) 0;
+}
+
+.project-language, .project-concepts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.project-links {
+    color: var(--font-color-dark);
+}
+
+.project-links a {
+    color: var(--font-color-dark);
+}
+
+.project-technology {
+    border: 1px solid var(--border-color-lightgray);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xs);
+    background-color: var(--background-color-gray);
+    font-size: var(--font-size-xs);
 }
 
 
@@ -213,18 +249,17 @@ nav a:hover::after, nav a.active::after {
 }
 
 .box:hover {
-    transform: translateY(-0.1em);
     border-color: var(--font-color-grey);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.4);
 }
 
 .box-title {
     font-weight: 700;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-sm);
 }
 
 .box-number {
-    font-size: var(--font-size-large);
+    font-size: var(--font-size-lg);
     color: var(--font-color-lightgrey);
     transition: var(--transition);
 }
