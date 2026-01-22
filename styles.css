@@ -10,7 +10,9 @@
     --nav-height: 10vh;
 
     /* Colors */
-    --background-color-gray: #EFEFEF;
+    --background-color-gray: #a0a0a0;
+    --background-color-lightgray: #EFEFEF;
+    --background-color-darkgray: #333333;
     --background-color-white: #FCFCFC;
     --background-color-black: #111111;
 
@@ -122,7 +124,7 @@ nav a:hover::after, nav a.active::after {
 }
 
 .section:nth-child(even) {
-    background-color: var(--background-color-gray);
+    background-color: var(--background-color-lightgray);
     color: var(--font-color-dark);
 }
 
@@ -136,6 +138,50 @@ nav a:hover::after, nav a.active::after {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
+}
+
+#home-textblock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+#home h1 {
+    font-size: var(--font-size-lg);
+}
+
+#home h2 {
+    font-size: var(--font-size-sm);
+}
+
+#home p {
+    max-width: 50%;
+}
+
+#home button {
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+    background-color: var(--background-color-darkgray);
+    color: var(--font-color-light);
+    border: 1px solid var(--border-color-lightgray);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#home button:hover {
+    opacity: 85%;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.15em);
+}
+
+#home button a {
+    text-decoration: none;
+    color: var(--font-color-light);
 }
 
 /* Education Styles */
@@ -209,13 +255,20 @@ nav a:hover::after, nav a.active::after {
 
 .project-links a {
     color: var(--font-color-dark);
+    padding: 0.5em;
+    border-radius: var(--border-radius);
+    transition: all 0.15s ease-in-out;
+}
+
+.project-links a:hover {
+    background-color: var(--background-color-lightgray);
 }
 
 .project-technology {
     border: 1px solid var(--border-color-lightgray);
     border-radius: var(--border-radius);
     padding: var(--spacing-xs);
-    background-color: var(--background-color-gray);
+    background-color: var(--background-color-lightgray);
     font-size: var(--font-size-xs);
 }
 
@@ -298,7 +351,7 @@ nav a:hover::after, nav a.active::after {
     justify-content: center;
     flex-direction: column;
     gap: var(--spacing-sm);
-    background-color: var(--background-color-gray);
+    background-color: var(--background-color-lightgray);
     text-decoration: none;
     transition: transform 0.25s ease-in-out;
     padding: var(--spacing-md);
