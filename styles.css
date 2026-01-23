@@ -22,7 +22,7 @@
     --font-color-dark: #111111;
     --font-color-muted: #a0a0a0;
 
-    /* Sizing */
+    /* Font */
     --font-size-lg: 3.5em;
     --font-size-md: 2.5em;
     --font-size-sm: 1.5em;
@@ -32,6 +32,7 @@
     --border-color-gray: #999999;
     --border-color-lightgray: #CCCCCC;
     --border-color-light: #e0e0e0;
+    --border-color-dark: #111111;
     --border-radius: 0.5em;
 
     /* Spacing */
@@ -192,13 +193,138 @@ nav a:hover::after, nav a.active::after {
     gap: 3em;
 }
 
+#education-container {
+    width: 60%;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 3em;
+    border-left: 1px solid var(--border-color-lightgray);
+}
+
+.timeline-item {
+    margin-bottom: var(--spacing-lg);
+    position: relative;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -3.37em;
+    top: 0.3em;
+    width: 0.7em;
+    height: 0.7em;
+    background-color: var(--background-color-gray);
+    border-radius: 50%;
+}
+
+.timeline-item:first-child .timeline-dot {
+    background-color: var(--font-color-dark);
+    width: 1.25em;
+    height: 1.25em;
+    left: -3.65em;
+    top: 0;
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background-color: var(--background-color-white);
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color-light);
+}
+
+.timeline-content h3 {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.timeline-content p {
+    color: var(--font-color-muted);
+}
 
 /* Experience Styles */
 #experience {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3em;
+    gap: 0.75em;
+}
+
+.experience-card {
+    background-color: var(--background-color-white);
+    border: 1px solid var(--border-color-light);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+#experience-title {
+    margin-bottom: var(--spacing-md);
+}
+
+.experience-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.experience-title {
+    font-size: var(--font-size-md);
+    font-weight: 600;
+}
+
+.experience-place {
+    font-size: var(--font-size-sm);
+    color: var(--font-color-grey);
+}
+
+.experience-date {
+    color: var(--font-color-muted);
+}
+
+.experience-body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.experience-description {
+    line-height: 1.75;
+}
+
+.experience-skills h4 {
+    font-size: 1.1em;
+    margin-bottom: var(--spacing-sm);
+}
+
+.experience-skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+}
+
+.experience-skills li {
+    background-color: var(--background-color-lightgray);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.9em;
+}
+
+.experience-recommendation {
+    font-style: italic;
+    color: var(--font-color-muted);
+}
+
+.experience-connector {
+    border-left: 0.1em solid var(--border-color-dark);
+    height: 3em;
 }
 
 
@@ -222,7 +348,7 @@ nav a:hover::after, nav a.active::after {
     padding: var(--spacing-md);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-sm);
+    justify-content: space-between;
     transition: all 0.15s ease-in-out;
 }
 
@@ -232,25 +358,25 @@ nav a:hover::after, nav a.active::after {
 
 .project-title {
     font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-description {
+    margin-bottom: var(--spacing-sm);
 }
 
 .project-technologies {
     display: flex;
-    flex-direction: column;
-    gap: 0.5em;
-    color: var(--font-color-dark);
-    margin: var(--spacing-sm) 0;
-}
-
-.project-language, .project-concepts {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 0.5em;
+    color: var(--font-color-dark);
+    margin-bottom: var(--spacing-sm);
 }
 
 .project-links {
     color: var(--font-color-dark);
+    margin-top: 0.75em;
 }
 
 .project-links a {
@@ -265,11 +391,10 @@ nav a:hover::after, nav a.active::after {
 }
 
 .project-technology {
-    border: 1px solid var(--border-color-lightgray);
-    border-radius: var(--border-radius);
-    padding: var(--spacing-xs);
     background-color: var(--background-color-lightgray);
-    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.9em;
 }
 
 
