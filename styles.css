@@ -185,6 +185,76 @@ nav a:hover::after, nav a.active::after {
     color: var(--font-color-light);
 }
 
+
+/* Projects Styles */
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+#projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3em;
+}
+
+.project {
+    border: 0.08em solid var(--border-color-light);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.project:hover {
+    border-color: var(--border-color-gray);
+}
+
+.project-title {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-description {
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-technologies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    color: var(--font-color-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-links {
+    color: var(--font-color-dark);
+    margin-top: 0.75em;
+}
+
+.project-links a {
+    color: var(--font-color-dark);
+    padding: 0.5em;
+    border-radius: var(--border-radius);
+    transition: all 0.15s ease-in-out;
+}
+
+.project-links a:hover {
+    background-color: var(--background-color-lightgray);
+}
+
+.project-technology {
+    background-color: var(--background-color-lightgray);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.9em;
+}
+
 /* Education Styles */
 #education {
     display: flex;
@@ -234,6 +304,11 @@ nav a:hover::after, nav a.active::after {
     padding: var(--spacing-sm);
     border-radius: var(--border-radius);
     border: 1px solid var(--border-color-light);
+    transition: transform 0.25s ease-in-out;
+}
+
+.timeline-content:hover {
+    transform: scale(1.02);
 }
 
 .timeline-content h3 {
@@ -262,6 +337,11 @@ nav a:hover::after, nav a.active::after {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
+    transition: var(--transition);
+}
+
+.experience-card:hover {
+    border-color: var(--border-color-gray);
 }
 
 #experience-title {
@@ -326,77 +406,6 @@ nav a:hover::after, nav a.active::after {
     border-left: 0.1em solid var(--border-color-dark);
     height: 3em;
 }
-
-
-/* Projects Styles */
-#projects {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3em;
-}
-
-#projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3em;
-}
-
-.project {
-    border: 0.08em solid var(--border-color-light);
-    border-radius: var(--border-radius);
-    padding: var(--spacing-md);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: all 0.15s ease-in-out;
-}
-
-.project:hover {
-    border-color: var(--border-color-gray);
-}
-
-.project-title {
-    font-size: var(--font-size-md);
-    margin-bottom: var(--spacing-sm);
-}
-
-.project-description {
-    margin-bottom: var(--spacing-sm);
-}
-
-.project-technologies {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.5em;
-    color: var(--font-color-dark);
-    margin-bottom: var(--spacing-sm);
-}
-
-.project-links {
-    color: var(--font-color-dark);
-    margin-top: 0.75em;
-}
-
-.project-links a {
-    color: var(--font-color-dark);
-    padding: 0.5em;
-    border-radius: var(--border-radius);
-    transition: all 0.15s ease-in-out;
-}
-
-.project-links a:hover {
-    background-color: var(--background-color-lightgray);
-}
-
-.project-technology {
-    background-color: var(--background-color-lightgray);
-    padding: var(--spacing-xs) var(--spacing-sm);
-    border-radius: var(--border-radius);
-    font-size: 0.9em;
-}
-
 
 /* Current Styles */
 #current {
