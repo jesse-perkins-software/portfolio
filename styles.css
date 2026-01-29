@@ -198,6 +198,7 @@ nav a:hover::after, nav a.active::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3em;
+    margin: 0 3em;
 }
 
 .project {
